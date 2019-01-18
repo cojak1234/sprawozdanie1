@@ -1,0 +1,12 @@
+%%Krzysztof Szwąder
+%%sk36781
+
+sub=rossubscriber('turtle1/pose'); %utworzenie subscribera
+while true
+    
+    read = receive(sub); %czytanie z tematu
+    x = read.X;
+    y = read.Y;
+    plot(x,y,'bo');
+    drawnow
+end
